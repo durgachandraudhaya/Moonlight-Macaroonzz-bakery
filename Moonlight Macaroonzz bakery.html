@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moonlight Macaroonzz</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #fff3e0, #fce4ec);
+    text-align: center;
+}
+
+.header {
+    background: linear-gradient(45deg, #8e2de2, #ff6a00);
+    color: white;
+    padding: 40px;
+}
+
+.section {
+    padding: 25px;
+}
+
+.menu {
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+}
+
+.button {
+    display: inline-block;
+    background: #25D366;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+input, textarea {
+    width: 80%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.footer {
+    background: #222;
+    color: white;
+    padding: 15px;
+}
+</style>
+
+<script>
+function sendToWhatsApp() {
+    var name = document.getElementById("name").value;
+    var cake = document.getElementById("cake").value;
+    var qty = document.getElementById("qty").value;
+    var date = document.getElementById("date").value;
+    var address = document.getElementById("address").value;
+
+    var message = "Hi, I want to order:%0A%0A"
+        + "Name: " + name + "%0A"
+        + "Cake Name: " + cake + "%0A"
+        + "Quantity: " + qty + "%0A"
+        + "Delivery Date: " + date + "%0A"
+        + "Address: " + address;
+
+    var phone = "919843485212"; // ✅ YOUR NUMBER
+
+    window.open("https://wa.me/" + phone + "?text=" + message, "_blank");
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="header">
+    <h1>🌕 Moonlight Macaroonzz 🥐</h1>
+    <p>Luxury bakery experience ✨</p>
+</div>
+
+<div class="section">
+    <h2>🎉 Grand Opening 🎉</h2>
+    <p>📍 Salem, Tamil Nadu</p>
+    <p>🗓 October 26 | ⏰ 8 AM - 5 PM</p>
+    <p>🎁 Free cupcakes | 🎂 10% OFF cakes</p>
+</div>
+
+<div class="menu">
+    <h2>🍰 Cakes</h2>
+    <p>Red Velvet - ₹500</p>
+    <p>Chocolate Truffle - ₹450</p>
+    <p>Vanilla Cake - ₹400</p>
+</div>
+
+<div class="menu">
+    <h2>🍪 Snacks</h2>
+    <p>Cookies - ₹120</p>
+    <p>Macarons - ₹200</p>
+    <p>Brownie - ₹90</p>
+</div>
+
+<div class="menu">
+    <h2>☕ Drinks</h2>
+    <p>Cappuccino - ₹120</p>
+    <p>Cold Coffee - ₹150</p>
+</div>
+
+<div class="section">
+    <h2>📍 Find Us</h2>
+    <iframe 
+        src="https://maps.google.com/maps?q=salem&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        width="90%" height="250" style="border-radius:10px;">
+    </iframe>
+</div>
+
+<!-- 🛒 ORDER FORM -->
+<div class="section">
+    <h2>🛒 Place Your Order</h2>
+
+    <form onsubmit="sendToWhatsApp(); return false;">
+        <input type="text" id="name" placeholder="Your Name" required><br><br>
+        <input type="text" id="cake" placeholder="Cake Name" required><br><br>
+        <input type="number" id="qty" placeholder="Quantity" required><br><br>
+        <input type="date" id="date" required><br><br>
+        <textarea id="address" placeholder="Delivery Address" required></textarea><br><br>
+
+        <button type="submit" class="button">Send Order 💬</button>
+    </form>
+</div>
+
+<div class="footer">
+    <p>Follow us on Instagram | Moonlight Macaroonzz</p>
+</div>
+
+</body>
+</html>
